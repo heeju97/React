@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+<p style="font-weight: bold;">리액트 문법</p>
+
+⭐️ JSX 문법이란? ⭐️
+↪️JSX는 JavaScript XML의 약자로 자바스크립트에서 XML을 추가한 확장형 문법.
+큰 특징은 자바스크립트에서 HTML 문법을 사용할 수 있다는 점이고 주로 리액트나 다른 프론트엔드 프레임워크에서도 사용이 가능.
+
+1.Class 넣을 때는 className:@@@
+2.변수 넣을 때는 {변수명} (데이터바인딩)
+3.Style 넣을 때는 style={{이름:’값’,이름:’값’}}
+
+
+
+⭐️ 자료를 잠시 저장할 때 : 변수 or state 문법 사용
+
+State 문법 :
+Import{useState}
+
+useState(‘보관할 자료 text’)
+
+자료 사용시 useState앞에 let[a,b]
+{a}= ‘보관할 자료 text’
+b= state 변경을 도와주는 함수
+
+state 변경
+1. 등호로 변경불가 => 변경은 가능하지만 html에서 반영이 되지 않음
+2.
+useState[a,b] 
+b= state 변경 함수=> 이것을 사용해야 재렌더링됨
+사용법= onClick={()=>{b(새로운state)}}
+
+
+*State 변경함수 특징
+기존state==신규state 의 경우 변경하지 않음
+[array/object 특징] 
+↪reference type 참고
+
+변수와 state 차이점
+왜 state를 사용하는가?
+일반 변수는 갑자기 변경되면 html에 자동으로 반영되지 않음
+state는 자동으로 html이 재렌더링됨
+=> 변경시 자동으로 html에 반영되게 만들고 싶으면 state사용, 
+=> 자주 변경될 거 같은 html부분은 state로 만들어놓기
+
+
+Jsx 안에서의 onClick (event handler) 사용방법
+onClick={} 중괄호 안에는 함수 이름을 넣어야함 => 함수를 만들ન야함
+1. 중괄호 안에서 함수를 정의해도 됨
+2. return 밖에서 정의해도 됨
+
+
+
+** JavaScript는 두 가지 자료형을 제공한다 (원시타입, 참조타입)
+*원시타입(Primitive Type)= 데이터 값을 보관한다
+종류= boolean, number, string, null, undefined
+*참조타입(Reference Type)= 데이터에 대한 참조를 저장
+= 변수가 가지고있는 메모리 주소를 이용하여 변수의 값에 접근
+종류= object(array, function, object)
+
+ex>
+let arr1 =[‘a’, ’b ‘, ‘c’];( 가상 메모리 주소: zxcvb)
+let arr2 = arr1 ;
+arr2[1] =‘d’; => (arr2=[‘a’, ’d’, ’c’],가상 메모리 주소: zxcvb)
+
+arr1==arr2
+
+
+arr1을 복사해 arr2를 만들고 arr2의 데이터 값을 변경하더라도
+arr1 == arr2 
+why? array를 복사할 때는 데이터([‘a’,’b’,’c’]) 값이 복사되지 않고 메모리 주소(zxcvb) 가 복사되기 때문
+
+
+
+컴포넌트 축약 =지저분한 html을 한 단어로 축약 (함수 or 변수)
+1. function 만들기 (위치 중요=> app함수 밖에 만들기) 작명은 대문자로 시작
+2. 함수 안에 return() , ()안에 html 담기
+3. 만든 함수(컴포넌트)를 html에 배치
+ex> function Modal (){
+	     return(
+		 함수 내용	
+			)
+           }
+html 배치방법 => <Modal></Modal>.     or.        </Modal>
+컴포넌트는 언제 사용하면 좋은가?
+1, 반복적인 html 축약할 때 사용
+2, 큰 페이지들
+3, 자주 변경되는 html UI
+🚨컴포넌트를 너무 많이 사용하면 state사용시 제한이 있을 수 있음 
+=> 컴포넌트는 새로운 함수에 작성하는 것, state는 같은 함수 내에서 사용 가능
+
+
+
+**fragment
+1. react는 <div>태그를 병렬적으로 배치할 수 없음
+2. 상위에 <div>태그로 다시 감싸주면 배치할 수 있음
+3. 2대로 하면 의미없는 <div>태그를 또 사용해야함
+4. 태그 안에 div를 지우고<> </>로 사용할 수 있음
+</body>
+</html>
