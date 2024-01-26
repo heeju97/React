@@ -102,5 +102,23 @@ html 배치방법 => <Modal></Modal>.     or.        </Modal>
 2. 상위에 <div>태그로 다시 감싸주면 배치할 수 있음
 3. 2대로 하면 의미없는 <div>태그를 또 사용해야함
 4. 태그 안에 div를 지우고<> </>로 사용할 수 있음
+
+동적인 UI 만들기 (경고문, 모달창, 툴팁 등)
+1. html css로 미리 디자인 완성
+2. UI의 현재 상태를 state로 저장
+3. state에 따라 UI가 어떻게 보일지 작성
+
+*toggle = ! 사용하기
+
+
+
+html(반복되는) 축약하는 방법 => 반복문 만들기
+*map
+[1,2,3].map(function(a){ 
+       array 자료 개수만큼 함수안의 코드를 실행해줌 
+       함수의 파라미터(a)는 array안에 있던 자료
+       return ’abcabc’ => abcabc를 array로 담아줌
+})
+
 </body>
 </html>
