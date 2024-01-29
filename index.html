@@ -135,5 +135,83 @@ props
 
 
 *eventbubbling 이벤트 버블링 막기 => 파라미터(e), {e.stopPropagation();}
+
+컴포넌트 만드는 방법
+1.class(옛날방법)
+=> 
+class 컴포넌트작명 extends React.Component{
+  constructor(){
+	super()
+	}
+	render(){
+		return(
+			<div>text<div>
+		)
+	}
+}
+1-1 class component에서 state 만들기
+class 컴포넌트작명 extends React.Component{
+  constructor(){
+	super()
+	this.state = {name:’han’ , age: 20}
+	}
+	render(){
+		return(
+			<div>{this.state.age(or name)}<div>
+		)
+	}
+}
+1-2 class component에서 state 변경하기
+class 컴포넌트작명 extends React.Component{
+  constructor(){
+	super()
+	this.state = {name:’han’ , age: 20}
+	}
+	render(){
+		return(
+			<div>{this.state.age(or name)}<div>
+			<button onClick={()=>{
+				this.setState({age:22})
+			}}></button>
+		)
+	}
+}
+1-2 class component에서 props 사용하기
+class 컴포넌트작명 extends React.Component{
+  constructor(props){
+	super(props);
+	this.state = {name:’han’ , age: 20}
+	}
+	render(){
+		return(
+			<div>{this.props}<div>
+			<button onClick={()=>{
+				this.setState({age:22})
+			}}></button>
+		)
+	}
+}
+
+
+
+
+
+*오류 : class component를 만들었더પ 적용이 안 되고 웹페이지 자체가 흰 배경만 띔, 그 전에 작성했던 코드의 UI가 보이지 않게 됨
+해결방법:import * as React from 'react' 을 상단에 작성하니 해결됨 이유는?
+이유=
+
+*warning message 지우기
+js file 최상단에 /* eslint-disable */ 입력
+
+
+* 파일간 변수 공유(복사)하기 (exprot, import)
+해당 파일에서 변수를 export 하고 정보를 받을 파일에서 import
+1.export =>
+export default 변수명;
+(변수가 여러개라면)
+export default {변수, 변수, 변수}
+2.import=>
+import 작명 from ‘변수를 가져오는 파일의 경로’
+
 </body>
 </html>
