@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +79,7 @@ why? array를 복사할 때는 데이터([‘a’,’b’,’c’]) 값이 복�
 
 
 
-컴포넌트 축약 =지저분한 html을 한 단어로 축약 (함수 or 변수)
+⭐️컴포넌트 축약 =지저분한 html을 한 단어로 축약 (함수 or 변수)
 1. function 만들기 (위치 중요=> app함수 밖에 만들기) 작명은 대문자로 시작
 2. 함수 안에 return() , ()안에 html 담기
 3. 만든 함수(컴포넌트)를 html에 배치
@@ -97,7 +98,7 @@ html 배치방법 => <Modal></Modal>.     or.        </Modal>
 
 
 
-**fragment
+⭐️fragment
 1. react는 <div>태그를 병렬적으로 배치할 수 없음
 2. 상위에 <div>태그로 다시 감싸주면 배치할 수 있음
 3. 2대로 하면 의미없는 <div>태그를 또 사용해야함
@@ -112,7 +113,7 @@ html 배치방법 => <Modal></Modal>.     or.        </Modal>
 
 
 
-html(반복되는) 축약하는 방법 => 반복문 만들기
+⭐️html(반복되는) 축약하는 방법 => 반복문 만들기
 *map
 [1,2,3].map(function(a){ 
        array 자료 개수만큼 함수안의 코드를 실행해줌 
@@ -123,7 +124,7 @@ html(반복되는) 축약하는 방법 => 반복문 만들기
 
 
 
-props 
+⭐️props 
 부모 컴포넌트에서 자식 컴포넌트로 state 전송할 수 있음 (자식에서 부모는 불가능)
 *부모->자식
 1. 자식 컴포넌트에서 작명
@@ -213,5 +214,33 @@ export default {변수, 변수, 변수}
 2.import=>
 import 작명 from ‘변수를 가져오는 파일의 경로’
 
+⭐️상세페이지 만들기
+리액트 사용시 index.html 한 개를 사용
+상세 페이지 내용을 컴포넌트에 담아서 /detail 접속시 해당 컴포넌트를 보여줌
+react-router-dom (라이브러리) 사용
+
+
+-react-router-dom 라이브러리 다운로드
+1. 터미널에 npm install reat-router-dom 설치 후 npm start
+2. index.js 에 import {BrowserRouter} from “react-router-dom”
+import from 사용시 ./(경로)=내가 만든 js파일, ./(경로)없으면 대부분 설치한 라이브러리
+1. <App/>를 <BrowserRouter>로 감쌈
+2. 
+
+
+router로 페이지 나누는 방법
+<Routes>
+        <Route />.   => 페이지 수
+        <Route/>
+ </Routes>
+
+
+<Route path=“/detail” element={<div>html작성<d/iv>}>
+/detail로 접속시 보여줄 화면을 element에 작성
+
+
 </body>
 </html>
+=======
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>React App</title><script defer="defer" src="/static/js/main.e9642190.js"></script><link href="/static/css/main.ae223668.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+>>>>>>> b98a1c2e09d82e9a75ccfde5092b596002a9b5cb
