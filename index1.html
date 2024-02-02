@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React</title>
+    <title>Document</title>
 </head>
 <body>
-<p style="font-weight: bold;">리액트 문법</p>
+    
 
-⭐️ JSX 문법이란? ⭐️
+    <!-- ⭐️ JSX 문법이란? ⭐️
 ↪️JSX는 JavaScript XML의 약자로 자바스크립트에서 XML을 추가한 확장형 문법.
 큰 특징은 자바스크립트에서 HTML 문법을 사용할 수 있다는 점이고 주로 리액트나 다른 프론트엔드 프레임워크에서도 사용이 가능.
 
@@ -77,9 +76,13 @@ arr1을 복사해 arr2를 만들고 arr2의 데이터 값을 변경하더라도
 arr1 == arr2 
 why? array를 복사할 때는 데이터([‘a’,’b’,’c’]) 값이 복사되지 않고 메모리 주소(zxcvb) 가 복사되기 때문
 
+ -->
 
-
+<!-- <<<<<<< HEAD
 ⭐️컴포넌트 축약 =지저분한 html을 한 단어로 축약 (함수 or 변수)
+=======
+컴포넌트 축약 =지저분한 html을 한 단어로 축약 (함수 or 변수)
+>>>>>>> 959e84e23f03ebf9f3eae7ccc8ebc485d66c3b71
 1. function 만들기 (위치 중요=> app함수 밖에 만들기) 작명은 대문자로 시작
 2. 함수 안에 return() , ()안에 html 담기
 3. 만든 함수(컴포넌트)를 html에 배치
@@ -95,40 +98,52 @@ html 배치방법 => <Modal></Modal>.     or.        </Modal>
 3, 자주 변경되는 html UI
 🚨컴포넌트를 너무 많이 사용하면 state사용시 제한이 있을 수 있음 
 => 컴포넌트는 새로운 함수에 작성하는 것, state는 같은 함수 내에서 사용 가능
+ -->
+<!-- 
 
-
-
+<<<<<<< HEAD
 ⭐️fragment
-1. react는 <div>태그를 병렬적으로 배치할 수 없음
+=======
+**fragment
+>>>>>>> 959e84e23f03ebf9f3eae7ccc8ebc485d66c3b71 -->
+<!-- 1. react는 <div>태그를 병렬적으로 배치할 수 없음
 2. 상위에 <div>태그로 다시 감싸주면 배치할 수 있음
 3. 2대로 하면 의미없는 <div>태그를 또 사용해야함
-4. 태그 안에 div를 지우고<> </>로 사용할 수 있음
-
+4. 태그 안에 div를 지우고<> </>로 사용할 수 있음 -->
+<!-- 
 동적인 UI 만들기 (경고문, 모달창, 툴팁 등)
 1. html css로 미리 디자인 완성
 2. UI의 현재 상태를 state로 저장
 3. state에 따라 UI가 어떻게 보일지 작성
 
-*toggle = ! 사용하기
+*toggle = ! 사용하기 -->
+<!-- 
 
 
-
+<<<<<<< HEAD
 ⭐️html(반복되는) 축약하는 방법 => 반복문 만들기
+=======
+html(반복되는) 축약하는 방법 => 반복문 만들기
+>>>>>>> 959e84e23f03ebf9f3eae7ccc8ebc485d66c3b71
 *map
 [1,2,3].map(function(a){ 
        array 자료 개수만큼 함수안의 코드를 실행해줌 
        함수의 파라미터(a)는 array안에 있던 자료
        return ’abcabc’ => abcabc를 array로 담아줌
-})
+}) -->
 
 
 
 
+<<<<<<< HEAD
 ⭐️props 
+=======
+props 
+>>>>>>> 959e84e23f03ebf9f3eae7ccc8ebc485d66c3b71
 부모 컴포넌트에서 자식 컴포넌트로 state 전송할 수 있음 (자식에서 부모는 불가능)
 *부모->자식
 1. 자식 컴포넌트에서 작명
-<자식컴포넌트 작명={state이름}>
+<!-- <자식컴포넌트 작명={state이름}> -->
 2. porps 파라미터 등록 후 props.작명 사용
 
 
@@ -163,7 +178,7 @@ class 컴포넌트작명 extends React.Component{
 	}
 }
 1-2 class component에서 state 변경하기
-class 컴포넌트작명 extends React.Component{
+<!-- class 컴포넌트작명 extends React.Component{
   constructor(){
 	super()
 	this.state = {name:’han’ , age: 20}
@@ -191,7 +206,7 @@ class 컴포넌트작명 extends React.Component{
 			}}></button>
 		)
 	}
-}
+} -->
 
 
 
@@ -214,6 +229,7 @@ export default {변수, 변수, 변수}
 2.import=>
 import 작명 from ‘변수를 가져오는 파일의 경로’
 
+<<<<<<< HEAD
 ⭐️상세페이지 만들기
 리액트 사용시 index.html 한 개를 사용
 상세 페이지 내용을 컴포넌트에 담아서 /detail 접속시 해당 컴포넌트를 보여줌
@@ -224,23 +240,19 @@ react-router-dom (라이브러리) 사용
 1. 터미널에 npm install reat-router-dom 설치 후 npm start
 2. index.js 에 import {BrowserRouter} from “react-router-dom”
 import from 사용시 ./(경로)=내가 만든 js파일, ./(경로)없으면 대부분 설치한 라이브러리
-1. <App/>를 <BrowserRouter>로 감쌈
+<!-- 1. <App/>를 <BrowserRouter>로 감쌈 -->
 2. 
 
 
 router로 페이지 나누는 방법
-<Routes>
+<!-- <Routes>
         <Route />.   => 페이지 수
         <Route/>
  </Routes>
 
 
-<Route path=“/detail” element={<div>html작성<d/iv>}>
+<Route path=“/detail” element={<div>html작성</div>}> -->
 /detail로 접속시 보여줄 화면을 element에 작성
-
 
 </body>
 </html>
-=======
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>React App</title><script defer="defer" src="/static/js/main.e9642190.js"></script><link href="/static/css/main.ae223668.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
->>>>>>> b98a1c2e09d82e9a75ccfde5092b596002a9b5cb
